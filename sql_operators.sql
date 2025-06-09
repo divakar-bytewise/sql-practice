@@ -59,19 +59,19 @@ select player_id, player_name from players where nationality is not null;
 -- players from specific countries.
 select * from players where nationality in ('India', 'England');
 
--- players not from these countries
+-- players not from these countries.
 select * from players where nationality not in ('India', 'England');
 
--- players born between 1990 and 2000
+-- players born between 1990 and 2000.
 select * from players where dob between '1990-01-01' and '2000-12-31';
 
--- players who scored between 40 and 80 runs
+-- players who scored between 40 and 80 runs.
 select * from players_stats where runs_scored between 40 and 80;
 
--- players whose names start with 'v'
+-- players whose names start with 'v'.
 select * from players where player_name like 'v%';
 
--- players whose names end with 'n'
+-- players whose names end with 'n'.
 select * from players where player_name like '%n';
 
 -- names with exactly 5 letters.
