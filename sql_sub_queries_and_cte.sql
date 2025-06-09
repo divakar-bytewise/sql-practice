@@ -3,7 +3,6 @@ use sql_divakar;
 
 --sql sub_queries.
 
-
 --getting players who played in matches and won by 'India'.
 select * from players 
 where player_id in (
