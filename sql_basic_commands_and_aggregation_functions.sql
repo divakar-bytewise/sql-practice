@@ -88,6 +88,10 @@ create index idx_player_name on players(player_name);
 --i am dropping the umpires table.
 drop table umpires;
 
+
+--aggergation function.
+
+
 --adding runs scored by all players.
 select sum(runs_scored) as total_runs from players_stats;
 
@@ -103,12 +107,33 @@ select min(runs_scored) as minimum_runs from players_stats;
 --calculating max - runs scored by the players.
 select max(runs_scored) as maximum_runs from players_stats;
 
---using where caluse to retrive only the Indian players.
+
+--sql clauses.
+
+
+--using where clause to retrive only the Indian players.
 select * from players where nationality = 'India';
 
---using group by caluse to group the players by the play_id.
+--using group by and having clause to group the players by the play_id.
 select player_id, sum(runs_scored) as total_runs
 from players_stats
-group by player_id;
+group by player_id having sum(runs_scored)>40;
+
+select p.nationality,count(*) as total_no_players
+from players p group by p.nationality;
+
+--using having clause
+select p.nationality,count(*) as total_no_players
+from players p group by p.nationality
+having count(*)>1;
+
+--using order by clause.
+select player_name, nationality,dob from players order by dob desc;
+
+--instead of limit we can usethe top in ssms.
+select top 3 * from players_stats;
+
+--using 'in' clause.
+select player_name from players where nationality in ('India','England');
 
 
