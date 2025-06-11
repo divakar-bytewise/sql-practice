@@ -45,3 +45,21 @@ This repository contains various SQL concepts, examples, and practical exercises
 ### 9. Transactions (TCL)
 - Using `BEGIN TRANSACTION`, `SAVEPOINT`, `ROLLBACK`, and `COMMIT`
 
+### 10. Joins
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN
+
+### 11. Views
+- Creating and querying views
+
+### 12. Procedures
+- Creating stored procedures
+- Executing procedures with/without parameters
+
+### 13. SQL CASE Expressions
+- Using CASE for conditional logic in queries
+
+
+
