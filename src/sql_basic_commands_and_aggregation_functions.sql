@@ -135,5 +135,3 @@ select top 3 * from players_stats;
 
 --using 'in' clause.
 select player_name from players where nationality in ('India','England');
-
-
