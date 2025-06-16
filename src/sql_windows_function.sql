@@ -25,3 +25,8 @@ from players_stats;
 select player_id, runs_scored,
 row_number() over (order by runs_scored desc) as rank_by_runs
 from players_stats;
+
+--finding the players count in each country.
+select nationality, count(*) over(partition by nationality) 
+as total_players from players;
+
